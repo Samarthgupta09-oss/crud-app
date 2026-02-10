@@ -1,6 +1,7 @@
 {% extends 'base.html' %} {% block body %}
+
 <div class="container">
-    <h1 class="text-center">Update Employee Data</h1>
+    <h1 class="text-center">Add Employee Data</h1>
     <form action="/update/{{employee.sno}}" method="POST">
         <div class="mb-3">
             <label for="" class="form-label">Full Name</label>
@@ -8,13 +9,12 @@
         </div>
         <div class="mb-3">
             <label for="" class="form-label">Email</label>
-            <input type="email" class="form-control" name="email" id="" placeholder="Enter Email" value="{{employee.email}}">
+            <input type="email" class="form-control" name="email" value="{{employee.email}}" id="" placeholder="Enter Email">
         </div>
         <div class="mb-3">
             <button type="submit" class="btn btn-primary">Submit</button>
         </div>
     </form>
 </div>
-
 
 {% endblock body %}
